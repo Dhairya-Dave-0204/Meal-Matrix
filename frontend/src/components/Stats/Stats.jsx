@@ -7,7 +7,7 @@ function Stats() {
       <section className="flex flex-col lg:flex-row gap-8 px-6 py-4 md:px-28 lg:px-56 mb-16">
         {/* ============= LEFT CONTENT =========== */}
         <div className=" lg:w-2/5">
-          <h2 className="text-2xl font-semibold mb-4 md:text-5xl">
+          <h2 className="text-2xl font-semibold mb-4 md:text-5xl font-expletus">
             <span className="text-primary">
               Elevating Your Business <br /> Experience
             </span>{" "}

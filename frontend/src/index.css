@@ -17,3 +17,8 @@ body {
   background-color: #faf9f6;
   color: #33372C;
 }
+
+.active {
+  border: 4px solid #FF885B;
+  padding: 2px;
+}
