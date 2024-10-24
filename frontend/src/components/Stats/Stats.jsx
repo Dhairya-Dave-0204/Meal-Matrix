@@ -1,5 +1,5 @@
 import React from "react";
-import { StatCard } from "../component_index" 
+import { StatCard } from "../component_index";
 
 function Stats() {
   return (

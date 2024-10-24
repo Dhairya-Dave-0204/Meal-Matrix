@@ -16,10 +16,7 @@ function Navbar() {
       </Link>
 
       <ul className="hidden xl:flex items-center gap-12 font-semibold text-xl text-primary">
-        <Link
-          to="/"
-          className=" hover:scale-110 transition-all duration-700"
-        >
+        <Link to="/" className=" hover:scale-110 transition-all duration-700">
           Home
         </Link>
         <Link
@@ -48,26 +45,26 @@ function Navbar() {
             to="/profile"
             className=" hover:scale-110 transition-all duration-700 relative"
           >
-            <img src= {assets.basket_icon} alt="" />
-            <div className=' absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2'></div>
+            <img src={assets.basket_icon} alt="" />
+            <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
           </Link>
           <Link
-          to="/signout"
-          className=" hover:scale-110 transition-all duration-700"
-        >
-          <button className='bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700'>
+            to="/signout"
+            className=" hover:scale-110 transition-all duration-700"
+          >
+            <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
               Signout
             </button>
-        </Link>
+          </Link>
         </div>
       ) : (
         <Link
           to="/signin"
           className=" hover:scale-110 transition-all duration-700"
         >
-          <button className='bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700'>
-              Sign In
-            </button>
+          <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
+            Sign In
+          </button>
         </Link>
       )}
 
@@ -82,10 +79,7 @@ function Navbar() {
         }`}
         style={{ transition: "transfrom 0.3s ease, opacity 0.3s ease" }}
       >
-        <Link
-          to="/"
-          className=" hover:scale-110 transition-all duration-700"
-        >
+        <Link to="/" className=" hover:scale-110 transition-all duration-700">
           Home
         </Link>
         <Link
@@ -108,31 +102,31 @@ function Navbar() {
         </Link>
         {user ? (
           <div className="xl:hidden flex flex-col items-center gap-6">
-          <Link
-            to="/profile"
-            className=" hover:scale-110 transition-all duration-700 relative"
-          >
-            <img src= {assets.basket_icon} alt="" />
-            <div className=' absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2'></div>
-          </Link>
-          <Link
-          to="/signout"
-          className=" hover:scale-110 transition-all duration-700"
-        >
-          <button className='bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700'>
-              Signout
-            </button>
-        </Link>
+            <Link
+              to="/profile"
+              className=" hover:scale-110 transition-all duration-700 relative"
+            >
+              <img src={assets.basket_icon} alt="" />
+              <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
+            </Link>
+            <Link
+              to="/signout"
+              className=" hover:scale-110 transition-all duration-700"
+            >
+              <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
+                Signout
+              </button>
+            </Link>
           </div>
         ) : (
           <Link
-          to="/signin"
-          className=" hover:scale-110 transition-all duration-700"
-        >
-          <button className='bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700'>
+            to="/signin"
+            className=" hover:scale-110 transition-all duration-700"
+          >
+            <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
               Sign In
             </button>
-        </Link>
+          </Link>
         )}
       </div>
     </nav>
