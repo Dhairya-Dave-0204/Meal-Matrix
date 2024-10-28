@@ -178,7 +178,7 @@ export const food_list = [
         category: "Rolls"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Scoop Ice Cream",
         image: food_9,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -199,7 +199,7 @@ export const food_list = [
         category: "Deserts"
     }, {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Plain Ice Cream",
         image: food_12,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -207,7 +207,7 @@ export const food_list = [
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Pork Sandwich",
         image: food_13,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -250,7 +250,7 @@ export const food_list = [
         category: "Cake"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Berry Cake",
         image: food_19,
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -271,7 +271,7 @@ export const food_list = [
         category: "Pure Veg"
     }, {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Cauliflower",
         image: food_22,
         price: 22,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -334,19 +334,5 @@ export const food_list = [
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Noodles"
-    }, {
-        _id: "31",
-        name: "Somen Noodles",
-        image: food_31,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "32",
-        name: "Cooked Noodles",
-        image: food_32,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }
+    },
 ]

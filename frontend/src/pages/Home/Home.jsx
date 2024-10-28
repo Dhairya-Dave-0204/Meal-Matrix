@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Stats, ExploreMenu } from "../../components/component_index";
+import { Header, Stats, ExploreMenu, FoodDisplay } from "../../components/component_index";
 
 function Home() {
   const [category, setCategory] = useState("All");
@@ -9,6 +9,7 @@ function Home() {
       <Header />
       <Stats />
       <ExploreMenu category={category} setCategory={setCategory} />
+      <FoodDisplay category={category} />
     </div>
   );
 }

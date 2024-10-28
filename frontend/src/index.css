@@ -22,3 +22,8 @@ body {
   border: 4px solid #FF885B;
   padding: 2px;
 }
+
+.food-display-list {
+  grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  row-gap: 50px;
+}
