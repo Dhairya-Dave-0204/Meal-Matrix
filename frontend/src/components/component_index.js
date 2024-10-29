@@ -6,6 +6,8 @@ import ExploreMenu from "./ExploreMenu/ExploreMenu";
 import FoodDisplay from "./FoodDisplay/FoodDisplay";
 import FoodItem from "./FoodItem/FoodItem";
 import Footer from "./Footer/Footer";
+import Testimonail from "./Testimonial/Testimonail";
+import Card from "./Testimonial/Card";
 
 export {
     Navbar,
@@ -16,4 +18,6 @@ export {
     FoodDisplay,
     FoodItem,
     Footer,
+    Testimonail,
+    Card,
 }
