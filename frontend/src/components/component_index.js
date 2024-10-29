@@ -5,6 +5,7 @@ import Stats from "./Stats/Stats";
 import ExploreMenu from "./ExploreMenu/ExploreMenu";
 import FoodDisplay from "./FoodDisplay/FoodDisplay";
 import FoodItem from "./FoodItem/FoodItem";
+import Footer from "./Footer/Footer";
 
 export {
     Navbar,
@@ -14,4 +15,5 @@ export {
     ExploreMenu,
     FoodDisplay,
     FoodItem,
+    Footer,
 }
