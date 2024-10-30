@@ -28,3 +28,24 @@ body {
   grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
   row-gap: 50px;
 }
+
+.cart-items-title {
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  display: grid;
+  align-items: center;
+  font-size: max(1vw, 14px);
+}
+
+.checkout {
+  width: max(15vw,200px);
+}
+
+.promo-submit {
+  width: max(10vw,150px);
+  padding: 12px 5px;
+  border: none;
+  background: #000;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+}

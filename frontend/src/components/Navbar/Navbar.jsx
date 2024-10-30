@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/storeContext";
 
 function Navbar({setShowLogin}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const user = null
+  const{ getTotalCartAmount } = useContext(StoreContext)
+
+  const user = "dhairya"
 
   return (
     <nav className="flex justify-between items-center py-4 gap-3 px-4 md:px-32 z-20">
@@ -40,11 +43,11 @@ function Navbar({setShowLogin}) {
       {user ? (
         <div className="hidden xl:flex items-center justify-center text-primary font-semibold text-xl gap-12">
           <Link
-            to="/profile"
+            to="/cart"
             className=" hover:scale-110 transition-all duration-700 relative"
           >
             <img src={assets.basket_icon} alt="" />
-            <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
+            <div className={getTotalCartAmount() === 0 ? "" : "absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"}></div>
           </Link>
           <Link
             to="/signout"
@@ -101,7 +104,7 @@ function Navbar({setShowLogin}) {
         {user ? (
           <div className="xl:hidden flex flex-col items-center gap-6">
             <Link
-              to="/profile"
+              to="/cart"
               className=" hover:scale-110 transition-all duration-700 relative"
             >
               <img src={assets.basket_icon} alt="" />
