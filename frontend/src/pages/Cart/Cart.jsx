@@ -1,9 +1,12 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../../context/storeContext'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
 
   const {cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext)
+
+  const navigate = useNavigate()
 
   return (
     <div className='mt-[100px] sm:mx-8 mb-20 sm:px-20 mx-2 px-4'>
@@ -46,7 +49,7 @@ function Cart() {
 
       <div className='flex flex-col-reverse md:flex-row justify-between mt-20 gap-10'>
         <div className='flex flex-1 flex-col gap-5'>
-          <h2>Cart Total</h2>
+          <h2 className='text-3xl font-semibold'>Cart Total</h2>
 
           <div>
             <div className='flex justify-between'>
@@ -58,18 +61,19 @@ function Cart() {
             
             <div className='flex justify-between'>
               <p>Delivery Fee</p>
-              <p>${2}</p>
+              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
             
             <hr className='my-3'/>
             
             <div className='flex justify-between'>
               <b>Total</b>
-              <b>${getTotalCartAmount() + 2}</b>
+              <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
             </div>
           </div>
           
-          <button className='checkout text-white font-medium text-xl hover:bg-secondary hover:text-primary transition-all dura5y bg-primary p-3 rounded'>
+          <button onClick={() => navigate("/order")}
+            className='checkout text-white font-medium text-xl hover:bg-secondary hover:text-primary transition-all dura5y bg-primary p-3 rounded'>
             Proced to Checkout
           </button>
         </div>

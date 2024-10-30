@@ -49,3 +49,24 @@ body {
   border-radius: 4px;
   font-weight: 500;
 }
+
+.place-order-left {
+  width: 100%;
+  max-width: max(30%, 500px);
+}
+
+.place-order-left input {
+  margin-bottom: 15px;
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #FF885B;
+  border-radius: 4px;
+  outline: none;
+  caret-color: #FF885B;
+}
+
+.place-order-right {
+  width: 100%;
+  max-width: max(40%, 500px);
+}
