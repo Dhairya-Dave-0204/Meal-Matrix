@@ -4,6 +4,7 @@ import PlaceOrder from "./PlaceOrder/PlaceOrder";
 import SignIn from "./SignIn/SignIn";
 import Signup from "./SignUp/Signup";
 import Menu from "./Mneu/Menu";
+import About from "./About/About";
 
 export {
     Home,
@@ -12,4 +13,5 @@ export {
     SignIn,
     Signup,
     Menu,
+    About,
 }
