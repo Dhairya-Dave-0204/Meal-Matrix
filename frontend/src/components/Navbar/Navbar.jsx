@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({setShowLogin}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const user = {
-    name: "Dhairya",
-  };
+  const user = null
 
   return (
-    <nav className="flex justify-between items-center py-4 gap-3 px-4 md:px-32">
+    <nav className="flex justify-between items-center py-4 gap-3 px-4 md:px-32 z-20">
       <Link to="/">
         <img src={assets.logo} alt="" className="w-42" />
       </Link>
@@ -60,7 +58,7 @@ function Navbar() {
       ) : (
         <Link
           to="/signin"
-          className=" hover:scale-110 transition-all duration-700"
+          className="hidden xl:flex hover:scale-110 transition-all duration-700"
         >
           <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
             Sign In

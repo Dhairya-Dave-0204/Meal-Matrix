@@ -8,12 +8,12 @@ function Card(props) {
         
         <div className="absolute top-[-7rem] z-[10] mx-auto">
           <img className="aspect-square rounded-full w-[140px] h-[140px] z-25" alt="" src={review.image}/>
-          <div className='w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] left-[10px] -z-[20]'></div>
+          <div className='w-[140px] h-[140px] bg-primary rounded-full absolute top-[-6px] left-[10px] -z-[20]'></div>
         </div>
         
         <div className='text-center mt-7'>
                   <p className="text-2xl tracking-wider font-bold capitalize">{review.name}</p>
-                  <p className='text-violet-300 uppercase text-sm'>{review.job}</p>
+                  <p className='text-primary opacity-60 uppercase text-sm'>{review.job}</p>
         </div>
   
         <div className='mx-auto mt-5'>
