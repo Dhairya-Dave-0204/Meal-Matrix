@@ -12,6 +12,10 @@ import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
 import Section1 from './Section1.png'
 import SearchBG from './SearchBG.png'
+import email from './email.png'
+import map from './map.png'
+import telephone from './telephone.png'
+import contact from './contact.jpg'
  
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -81,7 +85,11 @@ export const assets = {
     bag_icon,
     parcel_icon,
     Section1,
-    SearchBG
+    SearchBG,
+    email,
+    map,
+    telephone,
+    contact
 }
 
 export const menu_list = [

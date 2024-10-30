@@ -5,6 +5,8 @@ import SignIn from "./SignIn/SignIn";
 import Signup from "./SignUp/Signup";
 import Menu from "./Mneu/Menu";
 import About from "./About/About";
+import Contact from "./Contact/Contact";
+import FAQ from "./FAQ/FAQ";
 
 export {
     Home,
@@ -14,4 +16,6 @@ export {
     Signup,
     Menu,
     About,
+    Contact,
+    FAQ,
 }

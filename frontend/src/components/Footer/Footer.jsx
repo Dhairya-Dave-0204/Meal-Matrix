@@ -37,8 +37,8 @@ function Footer() {
               </li>
               
               <li>
-                <Link to="/delivery" className="hover:text-primary text-base">
-                  Delivery
+                <Link to="/cart" className="hover:text-primary text-base">
+                  Cart
                 </Link>
               </li>
             </ul>
