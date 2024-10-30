@@ -3,6 +3,7 @@ import Cart from "./Cart/Cart";
 import PlaceOrder from "./PlaceOrder/PlaceOrder";
 import SignIn from "./SignIn/SignIn";
 import Signup from "./SignUp/Signup";
+import Menu from "./Mneu/Menu";
 
 export {
     Home,
@@ -10,4 +11,5 @@ export {
     PlaceOrder,
     SignIn,
     Signup,
+    Menu,
 }
