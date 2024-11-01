@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios"
+import { StoreContext } from "../../context/storeContext";
 
-function SignIn() {
+function SignIn({data, setData, onChangeHandler}) {
+
+  const { url, setToken } = useContext(StoreContext)
+
+  const onLogIn = async (event) => {
+    event.preventDefault()
+    let newUrl = url
+    newUrl += "/api/user/login"
+
+    const response = axios.post(newUrl, data)
+
+    if (response.data.success) {
+      setToken(response.data.token)
+      localStorage.setItem("token", response.data.token)
+    } else {
+      alert(response.data.message)
+    }
+  }
+
+  useEffect(() => {
+    console.log(data);
+    
+  }, [data])
+
   return (
     <div className="h-[100vh] flex justify-center items-center">
       <div className="bg-white border rounded-xl p-8 shadow-lg backdrop-filter backdrop-blur-sm relative w-[310px] md:w-[560px] lg:w-[768px] h-[56vh] 2xl:h-[50vh]">
         <h2 className="text-4xl text-center mb-6 font-semibold">Sign In</h2>
-        <form action="#" className=" flex flex-col items-center">
+        <form onSubmit={onLogIn} className=" flex flex-col items-center">
           <div className="my-4 flex flex-col w-full">
             <label htmlFor="email" className="text-2xl mb-2">
               E-mail :
@@ -17,6 +42,8 @@ function SignIn() {
               name="email"
               placeholder="E-mail"
               required
+              onChange={onChangeHandler}
+              value={data.email}
               className="border border-primary border-opacity-30 transition-all duration-500 focus:border-opacity-100 text-primary outline-none accent-primary font-medium text-xl placeholder:text-gray-300 px-4 py-2"
             />
           </div>
@@ -31,6 +58,8 @@ function SignIn() {
               name="password"
               placeholder="Password"
               required
+              onChange={onChangeHandler}
+              value={data.password}
               className="border border-primary text-primary border-opacity-30 focus:border-opacity-100 outline-none accent-primary font-medium text-xl placeholder:text-gray-300 px-4 py-2"
             />
           </div>

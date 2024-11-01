@@ -3,12 +3,12 @@ import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../context/storeContext";
 
-function Navbar({setShowLogin}) {
+function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const{ getTotalCartAmount } = useContext(StoreContext)
 
-  const user = "dhairya"
+  const user = null
 
   return (
     <nav className="flex justify-between items-center py-4 gap-3 px-4 md:px-32 z-20">
