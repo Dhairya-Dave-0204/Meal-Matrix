@@ -1,15 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/frontend_assets/assets'
-import { StoreContext } from '../../context/storeContext'
+import { StoreContext } from '../../context/StoreContext'
 
 function FoodItem({id, name, price, description, image}) {
 
-    const {cartItems, addToCart, removeFromCart} = useContext(StoreContext)
+    const {cartItems, addToCart, removeFromCart, url} = useContext(StoreContext)
 
   return (
     <div className='w-[100%] m-auto rounded-xl hover:scale-105 hover:shadow-2xl transition-all duration-500'>
         <div className='relative'>
-            <img src={image} alt="" className='w-[100%] rounded-lg'/>
+            <img src={url+"/images/"+image} alt="" className='w-[100%] rounded-lg'/>
             {
                 !cartItems[id] ? 
                 <img src={assets.add_icon_white} onClick={() => addToCart(id)} alt="" 

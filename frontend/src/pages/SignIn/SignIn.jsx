@@ -25,11 +25,6 @@ function SignIn({data, onChangeHandler}) {
     }
   }
 
-  useEffect(() => {
-    console.log(data);
-    
-  }, [data])
-
   return (
     <div className="h-[100vh] flex justify-center items-center">
       <div className="bg-white border rounded-xl p-8 shadow-lg backdrop-filter backdrop-blur-sm relative w-[310px] md:w-[560px] lg:w-[768px] h-[56vh] 2xl:h-[50vh]">

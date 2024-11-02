@@ -1,4 +1,3 @@
-import exp from "constants";
 import foodModel from "../models/foodModels.js";
 import fs from "fs";
 
