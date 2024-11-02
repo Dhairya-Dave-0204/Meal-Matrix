@@ -1,31 +1,33 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { StoreContext } from '../../context/storeContext';
 
-function Signup({data, setData, onChangeHandler}) {
+function Signup({data, onChangeHandler}) {
 
-  const { url } = useContext(StoreContext);
+  const navigate = useNavigate()
+
+  const { url, setToken } = useContext(StoreContext);
 
   const onRegister = async (event) => {
     event.preventDefault()
     let newUrl = url
     newUrl += "/api/user/register"
 
-    const response = axios.post(newUrl, data)
+    const response = await axios.post(newUrl, data)
 
     if (response.data.success) {
-      setToken(response.data.token)
-      localStorage.setItem("token", response.data.token)
+      setToken(response?.data.token)
+      localStorage.setItem("token", response?.data.token)
+      navigate( "/")
     } else {
-      alert(response.data.message)
+      alert(response?.data.message)
     }
   }
 
 
   useEffect(() => {
     console.log(data);
-    
   }, [data])
 
   return (

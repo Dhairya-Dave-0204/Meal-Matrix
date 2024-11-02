@@ -28,7 +28,7 @@ app.use("/images", express.static('uploads'))
 app.use("/api/user",userRouter)
 
 app.get("/", (req,res) => {
-    res.send("CAT and DOG!")
+    res.send("Hello World!")
 })
 
 app.listen(port, () => {
