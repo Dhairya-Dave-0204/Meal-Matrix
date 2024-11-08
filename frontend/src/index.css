@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================= ANIMATION KEYFRAMES =================== */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= DEFAULT AND CSS ELEMENT STYLING =================== */
 * {
   font-family: "Athiti", sans-serif;
   padding: 0;
@@ -60,13 +68,22 @@ body {
   font-weight: 500;
   width: 100%;
   padding: 10px;
-  border: 1px solid #FF885B;
+  border: 1px solid #999;
+  background-color: #faf9f6;
   border-radius: 4px;
   outline: none;
   caret-color: #FF885B;
+  &:focus {
+    border: 1px solid #FF885B;
+  }
 }
 
 .place-order-right {
   width: 100%;
   max-width: max(40%, 500px);
+}
+
+.verify {
+  border-radius: 50%;
+  animation: 1s rotate infinite;
 }

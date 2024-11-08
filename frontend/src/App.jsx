@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Navbar, Footer } from './components/component_index'
 import { Route, Routes } from 'react-router-dom'
-import { Cart, Home, PlaceOrder, SignIn, Signup, Menu, About, Contact, FAQ } from './pages/page_index'
+import { Cart, Home, PlaceOrder, SignIn, Signup, Menu, About, Contact, FAQ, Verify } from './pages/page_index'
 
 function App() {
 
@@ -34,6 +34,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/faq' element={<FAQ />} />
+        <Route path='/verify' element={<Verify />} />
       </Routes>
       <Footer />
     </>

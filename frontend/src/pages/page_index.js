@@ -7,6 +7,7 @@ import Menu from "./Mneu/Menu";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import FAQ from "./FAQ/FAQ";
+import Verify from "./Verify/Verify";
 
 export {
     Home,
@@ -18,4 +19,5 @@ export {
     About,
     Contact,
     FAQ,
+    Verify,
 }
