@@ -8,12 +8,12 @@ function Navbar() {
 
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.removeItem("token")
-    setToken("")
-    navigate("/")
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
   };
 
   return (
@@ -68,9 +68,12 @@ function Navbar() {
             <img src={assets.profile_icon} alt="" />
           </Link>
           <Link
-            to="/"
-            className=" hover:scale-110 transition-all duration-700"
+            to="/myorders"
+            className="hidden xl:block hover:scale-110 transition-all duration-700 relative"
           >
+            <img src={assets.bag_icon} alt="" />
+          </Link>
+          <Link to="/" className=" hover:scale-110 transition-all duration-700">
             <button
               onClick={logout}
               className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700"
@@ -130,6 +133,18 @@ function Navbar() {
             >
               <img src={assets.basket_icon} alt="" />
               <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
+            </Link>
+            <Link
+              to="/cart"
+              className=" hover:scale-110 transition-all duration-700 relative"
+            >
+              <img src={assets.profile_icon} alt="" />
+            </Link>
+            <Link
+              to="/myorders"
+              className=" hover:scale-110 transition-all duration-700 relative"
+            >
+              <img src={assets.bag_icon} alt="" />
             </Link>
             <Link
               to="/signout"

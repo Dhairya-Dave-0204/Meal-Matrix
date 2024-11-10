@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../context/storeContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function PlaceOrder() {
 
   const { getTotalCartAmount, token, url, cartItems, food_list } = useContext(StoreContext)
+
+  const navigate = useNavigate()
 
   const [data, setData] = useState({
     firstName: "",
@@ -47,6 +50,13 @@ function PlaceOrder() {
       alert("Failed to place order")
     }
   }
+
+  useEffect(() => {
+    if (getTotalCartAmount() === 0) {
+      alert("Add items to cart before proceeding")
+      navigate("/menu")
+    }
+  }, [token])
   
   return (
     <form onSubmit={placeOrder} className="flex items-start justify-between gap-12 mt-[100px] px-4 md:px-24 lg:px-48 py-4 mx-4 md:mx-8 my-6 md:my-20">

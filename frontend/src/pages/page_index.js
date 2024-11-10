@@ -8,6 +8,7 @@ import About from "./About/About";
 import Contact from "./Contact/Contact";
 import FAQ from "./FAQ/FAQ";
 import Verify from "./Verify/Verify";
+import MyOrders from "./MyOrders/MyOrders";
 
 export {
     Home,
@@ -20,4 +21,5 @@ export {
     Contact,
     FAQ,
     Verify,
+    MyOrders,
 }

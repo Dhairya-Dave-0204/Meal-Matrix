@@ -87,3 +87,15 @@ body {
   border-radius: 50%;
   animation: 1s rotate infinite;
 }
+
+.orders {
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+}
+
+@media screen and (max-width:900px) {
+  .orders {
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 15px;
+    font-size: 14px;
+  }
+}
