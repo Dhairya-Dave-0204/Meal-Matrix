@@ -7,7 +7,6 @@ import FoodDisplay from "./FoodDisplay/FoodDisplay";
 import FoodItem from "./FoodItem/FoodItem";
 import Footer from "./Footer/Footer";
 import Testimonail from "./Testimonial/Testimonail";
-import Card from "./Testimonial/Card";
 
 export {
     Navbar,
@@ -19,5 +18,4 @@ export {
     FoodItem,
     Footer,
     Testimonail,
-    Card,
 }

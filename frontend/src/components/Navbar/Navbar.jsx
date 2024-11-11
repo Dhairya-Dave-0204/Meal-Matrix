@@ -62,12 +62,6 @@ function Navbar() {
             ></div>
           </Link>
           <Link
-            to="/profile"
-            className="hidden xl:block hover:scale-110 transition-all duration-700 relative"
-          >
-            <img src={assets.profile_icon} alt="" />
-          </Link>
-          <Link
             to="/myorders"
             className="hidden xl:block hover:scale-110 transition-all duration-700 relative"
           >
@@ -133,12 +127,6 @@ function Navbar() {
             >
               <img src={assets.basket_icon} alt="" />
               <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
-            </Link>
-            <Link
-              to="/cart"
-              className=" hover:scale-110 transition-all duration-700 relative"
-            >
-              <img src={assets.profile_icon} alt="" />
             </Link>
             <Link
               to="/myorders"

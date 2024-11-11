@@ -1,47 +1,108 @@
-import React, { useState } from "react";
-import { Card } from "../component_index";
-import reviews from "./data";
+import React from "react";
+import {
+  Card,
+  CardBody,
+  Typography,
+  CardHeader,
+} from "@material-tailwind/react";
+import PropTypes from 'prop-types';
 
-function Testimonail(props) {
-  const [index, setIndex] = useState(0);
+TestimonialCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  client: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  clientInfo: PropTypes.string.isRequired,
+};
 
-  function leftShiftHandler() {
-    if (index - 1 < 0) setIndex(reviews.length - 1);
-    else setIndex(index - 1);
-    // setIndex(Math.abs(index-1)%reviews.length);
-  }
-
-  function rightShiftHandler() {
-    // setReviews(reviews);
-    if (index + 1 >= reviews.length) setIndex(0);
-    else setIndex(index + 1);
-  }
-
-  function surpriseHandler() {
-    setIndex(Math.floor(Math.random() * reviews.length));
-  }
-
+function TestimonialCard({ img, client, title, clientInfo }) {
   return (
-    <div className="w-[85vw] md:w-[700px] bg-white flex flex-col justify-center items-center mt-10 p-10 transition-all duration-700 hover:shadow-xl">
-      <Card review={reviews[index]}></Card>
-      {/* if we use map then all the cards will be displayed/returned instead of only one needed at a time */}
-      <div className="flex mx-auto text-3xl font-bold mt-5 gap-3">
-        <button className="hover:text-primary" onClick={leftShiftHandler}>
-          <i className="ri-arrow-left-line"></i>
-        </button>
-        <button className="hover:text-primary" onClick={rightShiftHandler}>
-          <i className="ri-arrow-right-line"></i>
-        </button>
-      </div>
-      <div className="mt-5 mx-auto">
-        <button
-          onClick={surpriseHandler}
-          className="text-lg transition-all duration-500 bg-primary hover:bg-secondary hover:text-primary px-10 py-2 rounded-md font-bold text-white"
+    <Card shadow={false} className="bg-gray-100/50 rounded-2xl p-6">
+      <CardHeader color="transparent" floated={false} shadow={false}>
+        <Typography
+          color="blue-gray"
+          className="lg:mb-20 mb-4 text-2xl font-bold"
         >
-          Surprise Me
-        </button>
+          &quot;{title}&quot;
+        </Typography>
+      </CardHeader>
+      <CardBody className="px-4 py-0 flex flex-wrap-reverse gap-x-6 justify-between items-center">
+        <div>
+          <Typography variant="h6" color="blue-gray">
+            {client}
+          </Typography>
+          <Typography
+            variant="paragraph"
+            className="font-normal !text-gray-500"
+          >
+            {clientInfo}
+          </Typography>
+        </div>
+        <img src={img} className="special-img max-w-[8rem] grayscale" alt={client} />
+      </CardBody>
+    </Card>
+  );
+}
+
+const testimonials = [
+  {
+    title:
+      "The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!",
+    client: "Jessica Devis",
+    clientInfo: "Full Stack Developer @Netflix",
+    img: './netflix.svg',
+  },
+  {
+    title:
+      "It have broadened my horizons and helped me advance my career. The community is incredibly supportive.",
+    client: "Marcell Glock",
+    clientInfo: "Graphic Designer, @Amazon Prime",
+    img: './prime.svg',
+  },
+];
+
+function Testimonail() {
+  return (
+    <section className="px-8 py-8 lg:py-20">
+      <div className="container mx-auto">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
+          {testimonials.map((props, key) => (
+            <TestimonialCard key={key} {...props} />
+          ))}
+        </div>
+
+        <Card
+          shadow={false}
+          className="mt-8 bg-gray-100/50 text-center rounded-2xl p-6"
+        >
+          <CardHeader color="transparent" floated={false} shadow={false}>
+            <Typography
+              color="blue-gray"
+              className="mb-4 !text-2xl lg:!text-3xl max-w-4xl !leading-snug mx-auto font-bold"
+            >
+              &quot;Its intuitive design and powerful features make it
+              indispensable. I can&apos;t imagine going back to life before
+              it!&quot;
+            </Typography>
+          </CardHeader>
+          <CardBody className="items-center mx-auto py-2">
+            <img
+              src="./tesla.svg"
+              className="max-w-[8rem] mx-auto special-img"
+              alt="spotify"
+            />
+            <Typography variant="h6" color="blue-gray">
+              Emma Roberts
+            </Typography>
+            <Typography
+              variant="paragraph"
+              className="font-normal !text-gray-500"
+            >
+              Chief Executive @Tesla
+            </Typography>
+          </CardBody>
+        </Card>
       </div>
-    </div>
+    </section>
   );
 }
 

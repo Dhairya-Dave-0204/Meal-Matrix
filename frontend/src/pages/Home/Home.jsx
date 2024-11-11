@@ -25,7 +25,7 @@ function Home() {
         <div className="text-center">
           <h1 className="text-4xl font-bold">Our Testimonials</h1>
           <div className="bg-primary h-[4px] w-1/5 mx-auto mt-1"></div>
-          <Testimonail reviews={reviews} />
+          <Testimonail />
           {/* We can write the entrie code of testimonail instead of writing testimonial component since on clicking button only the index of actual data shifts left and right */}
         </div>
       </div>

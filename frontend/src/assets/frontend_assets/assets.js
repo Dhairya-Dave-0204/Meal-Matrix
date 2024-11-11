@@ -16,6 +16,7 @@ import email from './email.png'
 import map from './map.png'
 import telephone from './telephone.png'
 import contact from './contact.jpg'
+import blockquote from './blockquote.svg'
  
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -89,7 +90,8 @@ export const assets = {
     email,
     map,
     telephone,
-    contact
+    contact,
+    blockquote
 }
 
 export const menu_list = [

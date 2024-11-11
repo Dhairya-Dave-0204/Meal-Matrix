@@ -99,3 +99,7 @@ body {
     font-size: 14px;
   }
 }
+
+.special-img {
+  border-radius: 10%;
+}
