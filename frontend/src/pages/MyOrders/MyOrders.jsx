@@ -50,7 +50,7 @@ function MyOrders() {
                 <span className="text-primary">&#x25cf;</span> <b className="font-medium">{order.status}</b>
               </p>
               
-              <button className="py-[10px] rounded bg-secondary font-medium">Track Order</button>
+              <button onClick={fetchOrders} className="py-[10px] rounded bg-secondary font-medium">Track Order</button>
             </div>
           );
         })}

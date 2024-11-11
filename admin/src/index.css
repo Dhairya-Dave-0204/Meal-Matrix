@@ -80,3 +80,15 @@ body {
     gap: 15px;
   }
 }
+
+.order-item {
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width:1000px) {
+  .order-item {
+    font-size: 14px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px 8px;
+  }
+}
