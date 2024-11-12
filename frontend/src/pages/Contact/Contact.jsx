@@ -33,7 +33,7 @@ function Contact() {
   return (
     <>
       <div
-        className="bg-cover bg-center h-[50vh] flex flex-col mb-20 justify-center items-center text-white"
+        className="contact-banner bg-cover bg-center h-[50vh] flex flex-col mb-20 justify-center items-center text-white"
         style={{ backgroundImage: `url(${assets.contact})` }}
       >
         <h1 className="text-4xl md:text-7xl font-bold mb-4 font-expletus">
@@ -44,7 +44,7 @@ function Contact() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl mx-auto mt-5 mb-28">
+      <div className="contact-card grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl mx-auto mt-5 mb-28">
         <div className="flex items-center justify-center flex-col bg-white drop-shadow rounded-xl p-4 hover:scale-105 transition-all duration-500">
           <img src={assets.telephone} alt="" className=" w-20 h-20 mb-5" />
           <h2 className="text-2xl font-medium mb-2">Hotline</h2>
@@ -66,7 +66,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mb-20">
+      <div className="contact-form flex justify-center items-center mb-20">
         <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-center text-sm font-semibold text-gray-500 mb-1">
             KEEP IN TOUCH

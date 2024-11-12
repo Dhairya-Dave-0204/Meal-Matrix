@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       {/* ========================== FIRST SECTION ============================== */}
-      <div className=" flex items-center justify-between flex-col-reverse xl:flex-row px-4 md:px-28 lg:px-52 py-4 gap-8 mx-4 md:mx-8 my-6 md:my-20">
+      <div id="header-content" className="header-content flex items-center justify-between flex-col-reverse xl:flex-row px-4 md:px-28 lg:px-52 py-4 gap-8 mx-4 md:mx-8 my-6 md:my-20">
         {/* ============= LEFT CONTENT =========== */}
         <div>
           <h2 className="text-2xl md:text-4xl font-medium mb-2">

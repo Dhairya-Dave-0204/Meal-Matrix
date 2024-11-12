@@ -8,7 +8,7 @@ function About() {
     <>
       <div className="p-8 md:p-16 px-4 md:px-24 lg:px-48 py-4 gap-6 mx-4 md:mx-8 my-6 md:my-20">
         <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between">
-          <div className="md:w-1/2 space-y-6">
+          <div className="about-content md:w-1/2 space-y-6">
             <h2 className="text-primary font-semibold">About Us</h2>
             <h1 className="text-4xl font-bold font-expletus leading-tight">
               A Legacy of Compassionate Care!
@@ -42,7 +42,7 @@ function About() {
               Join Now
             </button>
           </div>
-          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+          <div className="about-img mt-8 md:mt-0 md:w-1/2 flex justify-center">
             <img
               src="https://img.freepik.com/free-photo/medium-shot-professional-chefs-working-together_23-2151232173.jpg?t=st=1730284506~exp=1730288106~hmac=be589fa78c192320d6d00dc73d613c86ab15743e751df49b945823ed29741a7f&w=1380"
               alt="Reception area"
@@ -51,7 +51,7 @@ function About() {
           </div>
         </div>
 
-        <div className="mt-20 leading-relaxed">
+        <div className="about-subtext mt-20 leading-relaxed">
           <h2 className=" text-3xl mb-10 font-expletus text-primary font-medium">
             Our Motive and our Aim
           </h2>

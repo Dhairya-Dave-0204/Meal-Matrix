@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StoreContext } from '../../context/StoreContext'
+import { StoreContext } from '../../context/storeContext'
 import { FoodItem } from '../component_index'
 
 function FoodDisplay({category}) {
@@ -7,7 +7,7 @@ function FoodDisplay({category}) {
     const {food_list} = useContext(StoreContext)
 
   return (
-    <div id='food-display' className='mt-7 px-4 md:px-24 lg:px-48 py-4 mx-4 md:mx-8 my-6 md:my-20'>
+    <div id='food-display' className='food-display mt-7 px-4 md:px-24 lg:px-48 py-4 mx-4 md:mx-8 my-6 md:my-20'>
         <h2 className=' text-6xl text-center text-primary font-semibold font-expletus mb-8'>
             Top dishes near you
         </h2>

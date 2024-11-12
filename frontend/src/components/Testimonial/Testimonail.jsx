@@ -64,7 +64,7 @@ function Testimonail() {
   return (
     <section className="px-8 py-8 lg:py-20">
       <div className="container mx-auto">
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
+        <div className="two-testimonial grid gap-8 grid-cols-1 lg:grid-cols-2">
           {testimonials.map((props, key) => (
             <TestimonialCard key={key} {...props} />
           ))}
@@ -72,7 +72,7 @@ function Testimonail() {
 
         <Card
           shadow={false}
-          className="mt-8 bg-gray-100/50 text-center rounded-2xl p-6"
+          className="mt-8 bg-gray-100/50 text-center rounded-2xl p-6 one-testimonial"
         >
           <CardHeader color="transparent" floated={false} shadow={false}>
             <Typography

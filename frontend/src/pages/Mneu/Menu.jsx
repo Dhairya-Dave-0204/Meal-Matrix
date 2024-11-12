@@ -9,7 +9,7 @@ function Menu() {
   return (
     <>
       <div
-        className="bg-cover bg-center h-[60vh] flex flex-col mb-20 justify-center items-center text-white"
+        className="menu-banner bg-cover bg-center h-[60vh] flex flex-col mb-20 justify-center items-center text-white"
         style={{ backgroundImage: `url(${assets.SearchBG})` }}
       >
         <h1 className="text-4xl md:text-7xl font-bold mb-4 font-expletus">

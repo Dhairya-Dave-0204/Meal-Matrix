@@ -5,7 +5,7 @@ function ExploreMenu({ category, setCategory }) {
   return (
     <div
       id="explore_menu"
-      className="px-4 md:px-24 lg:px-48 py-4 gap-6 mx-4 md:mx-8 my-6 md:my-20 flex flex-col"
+      className="explore-menu px-4 md:px-24 lg:px-48 py-4 gap-6 mx-4 md:mx-8 my-6 md:my-20 flex flex-col"
     >
       <h2 className="sm:text-5xl text-4xl font-semibold text-primary font-expletus text-center">
         Explore dishes from top restaurants
