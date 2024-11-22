@@ -56,7 +56,7 @@
 
 /* ================= ANIMATION APPLICATION =================== */
 .header-content {
-  animation: appear 5s ease;
+  animation: appear 2s ease;
 }
 
 .menu-banner, .about-subtext, .contact-banner, .contact-card {
