@@ -17,6 +17,12 @@ import map from './map.png'
 import telephone from './telephone.png'
 import contact from './contact.jpg'
 import blockquote from './blockquote.svg'
+
+import restaurnat1 from './restaurant1.jpg'
+import restaurnat2 from './restaurant2.jpg'
+import restaurnat3 from './restaurant3.jpg'
+import restaurnat4 from './restaurant4.jpg'
+import restaurnat5 from './restaurant5.jpg'
  
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -91,7 +97,12 @@ export const assets = {
     map,
     telephone,
     contact,
-    blockquote
+    blockquote,
+    restaurnat1,
+    restaurnat2,
+    restaurnat3,
+    restaurnat4,
+    restaurnat5,
 }
 
 export const menu_list = [

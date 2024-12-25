@@ -5,17 +5,17 @@ function ExploreMenu({ category, setCategory }) {
   return (
     <div
       id="explore_menu"
-      className="explore-menu px-4 md:px-24 lg:px-48 py-4 gap-6 mx-4 md:mx-8 my-6 md:my-20 flex flex-col"
+      className="flex flex-col gap-6 px-4 py-4 mx-4 my-6 explore-menu md:px-24 lg:px-48 md:mx-8 md:my-20"
     >
-      <h2 className="sm:text-5xl text-4xl font-semibold text-primary font-expletus text-center">
-        Explore dishes from top restaurants
+      <h2 className="text-4xl font-semibold text-center sm:text-5xl text-primary font-expletus">
+        Explore dishes from restaurant
       </h2>
-      <p className="text-center text-lg font-medium">
+      <p className="text-lg font-medium text-center">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
         similique dignissimos praesentium odio! Fugit, voluptates iusto nemo
         aliquam laboriosam voluptas.
       </p>
-      <div className="grid grid-cols-1 xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-2 place-items-center text-center gap-10 my-4 cursor-pointer">
+      <div className="grid grid-cols-1 gap-10 my-4 text-center cursor-pointer xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-2 place-items-center">
         {menu_list.map((item, index) => {
           return (
             <div
@@ -33,7 +33,7 @@ function ExploreMenu({ category, setCategory }) {
                   category === item.menu_name ? "active" : ""
                 } rounded-full transition-all duration-200 `}
               />
-              <p className="text-xl font-medium mt-2">{item.menu_name}</p>
+              <p className="mt-2 text-xl font-medium">{item.menu_name}</p>
             </div>
           );
         })}

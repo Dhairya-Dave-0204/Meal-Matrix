@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { Navbar, Footer } from './components/component_index'
 import { Route, Routes } from 'react-router-dom'
-import { Cart, Home, PlaceOrder, SignIn, Signup, Menu, About, Contact, FAQ, Verify, MyOrders } from './pages/page_index'
+import { Cart, Home, PlaceOrder, SignIn, Signup, Menu, About, Contact, FAQ, Verify, MyOrders, Restaurant } from './pages/page_index'
 
 function App() {
 
-  // use state hook to update the state off user form login and signup page and use that state to update navbar
-
-  //steps to check status of user and forward that status to the required component
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -36,6 +33,7 @@ function App() {
         <Route path='/faq' element={<FAQ />} />
         <Route path='/verify' element={<Verify />} />
         <Route path='/myorders' element={<MyOrders />} />
+        <Route path='/restaurant' element={<Restaurant />} />
       </Routes>
       <Footer />
     </>

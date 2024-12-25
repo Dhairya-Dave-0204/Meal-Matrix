@@ -9,6 +9,7 @@ import Contact from "./Contact/Contact";
 import FAQ from "./FAQ/FAQ";
 import Verify from "./Verify/Verify";
 import MyOrders from "./MyOrders/MyOrders";
+import Restaurant from "./Restaurant/Restaurant";
 
 export {
     Home,
@@ -22,4 +23,5 @@ export {
     FAQ,
     Verify,
     MyOrders,
+    Restaurant,
 }
