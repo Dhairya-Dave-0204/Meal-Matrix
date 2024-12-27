@@ -5,6 +5,7 @@ import {
   ExploreMenu,
   FoodDisplay,
   Testimonail,
+  RestaurantCards,
 } from "../../components/component_index";
 
 function Home() {
@@ -15,6 +16,8 @@ function Home() {
       <Header />
       
       <Stats />
+
+      <RestaurantCards />
       
       <ExploreMenu category={category} setCategory={setCategory} />
       

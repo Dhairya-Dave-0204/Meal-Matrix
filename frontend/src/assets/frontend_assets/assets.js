@@ -23,6 +23,8 @@ import restaurnat2 from './restaurant2.jpg'
 import restaurnat3 from './restaurant3.jpg'
 import restaurnat4 from './restaurant4.jpg'
 import restaurnat5 from './restaurant5.jpg'
+import restaurnat6 from './restaurant6.jpg'
+import restaurnat7 from './restaurant7.jpg'
  
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -103,6 +105,8 @@ export const assets = {
     restaurnat3,
     restaurnat4,
     restaurnat5,
+    restaurnat6,
+    restaurnat7,
 }
 
 export const menu_list = [

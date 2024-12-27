@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { assets } from '../../assets/frontend_assets/assets'
-import { StoreContext } from '../../context/StoreContext'
+import { StoreContext } from '../../context/storeContext'
 
 function FoodItem({id, name, price, description, image}) {
 
@@ -15,9 +15,9 @@ function FoodItem({id, name, price, description, image}) {
                 <img src={assets.add_icon_white} onClick={() => addToCart(id)} alt="" 
                     className='w-9 absolute bottom-4 right-4 cursor-pointer rounded-[50%]'
                 />
-                : <div className='absolute bottom-4 right-4 flex items-center gap-3 p-1 rounded-3xl bg-white'>
+                : <div className='absolute flex items-center gap-3 p-1 bg-white bottom-4 right-4 rounded-3xl'>
                     <img src={assets.remove_icon_red} onClick={() => removeFromCart(id)} alt="" 
-                        className='w-7 cursor-pointer'
+                        className='cursor-pointer w-7'
                     />
                     
                     <p>{cartItems[id]}</p>
@@ -28,8 +28,8 @@ function FoodItem({id, name, price, description, image}) {
         </div>
         
         <div className='p-7'>
-            <div className='flex justify-between items-center mb-2'>
-                <p className=' text-xl font-medium'>
+            <div className='flex items-center justify-between mb-2'>
+                <p className='text-xl font-medium '>
                     {name}
                 </p>
                 
@@ -41,7 +41,7 @@ function FoodItem({id, name, price, description, image}) {
                     {description}
                 </p>
                 
-                <p className='text-primary text-2xl font-semibold my-2'>
+                <p className='my-2 text-2xl font-semibold text-primary'>
                     ${price}
                 </p>
             </div>
