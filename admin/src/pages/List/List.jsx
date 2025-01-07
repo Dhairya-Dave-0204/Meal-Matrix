@@ -31,10 +31,10 @@ function List({url}) {
   }
 
   return (
-    <div className='w-[70%] ml-16 mt-14 text-lg add columns'>
+    <div className='w-[70%] ml-5 mt-5 md:ml-16 md:mt-14 text-lg add columns'>
       <p>All Foods List</p>
       <div>
-        <div className='table-format bg-gray-100 text-xl hidden md:grid'>
+        <div className='hidden text-xl bg-gray-100 table-format md:grid'>
           <b>Image</b>
           <b>Name</b>
           <b>Category</b>
@@ -44,7 +44,7 @@ function List({url}) {
 
         {list.map((item, index) => {
             return (
-              <div key={index} className='table-format grid'>
+              <div key={index} className='grid table-format'>
                 <img src={`${url}/images/` + item.image} alt={item.name} className='w-[60px]'/>
                 <p>{item.name}</p>
                 <p>{item.category}</p>

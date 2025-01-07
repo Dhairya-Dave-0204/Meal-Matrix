@@ -27,11 +27,11 @@ function Orders({ url }) {
   }, []);
 
   return (
-    <div className="w-[70%] ml-16 mt-14">
-      <h3>Order Page</h3>
+    <div className="w-[70%] ml-5 mt-5 md:ml-16 md:mt-14">
+      <h3 className="text-xl font-medium">Order Page</h3>
       <div>
         {orders.map((order, index) => (
-          <div key={index} className="order-item grid items-start gap-7 border border-primary p-5 my-7 text-base">
+          <div key={index} className="grid items-start p-5 text-base border order-item gap-7 border-primary my-7">
             <img src={assets.parcel_icon} alt="" />
 
             <div>
@@ -45,7 +45,7 @@ function Orders({ url }) {
                 })}
               </p>
 
-              <p className="font-semibold mt-7 mb-1">
+              <p className="mb-1 font-semibold mt-7">
                 {order.address.firstName + " " + order.address.lastName}
               </p>
 

@@ -11,7 +11,7 @@ function Home({ url }) {
   ];
 
   return (
-    <div className="w-[70%] ml-6 mt-6 md:ml-16 md:mt-14 text-lg add">
+    <div className="w-[70%] ml-5 mt-5 md:ml-16 md:mt-14 text-lg add">
       <h1 className="text-3xl font-medium md:font-semibold md:font-expletus md:mb-4 md:text-5xl text-primary">Restaurant Name</h1>
 
       <div className="p-4 mx-auto">

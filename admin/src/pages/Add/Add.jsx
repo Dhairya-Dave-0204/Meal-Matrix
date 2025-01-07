@@ -49,8 +49,8 @@ function Add({url}) {
     }
 
   return (
-    <div className='w-[70%] ml-16 mt-14 text-lg add'>
-        <form action="#" className='cloumns gap-5' onSubmit={onSubmitHandler}>
+    <div className='w-[70%] ml-5 mt-5 md:ml-16 md:mt-14 text-lg add'>
+        <form action="#" className='gap-5 cloumns' onSubmit={onSubmitHandler}>
             <div className='cloumns'>
                 <p>Upload image</p>
                 <label htmlFor="image">
