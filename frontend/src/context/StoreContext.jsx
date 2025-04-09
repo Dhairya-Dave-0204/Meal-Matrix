@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
 
   const [food_list, setFoodList] = useState([])
 
-  const url = "http://localhost:4000"
+  const url = "https://meal-matrix-backend-julm.onrender.com"
   const [token, setToken] = useState("")
 
   const addToCart = async (itemId) => {
