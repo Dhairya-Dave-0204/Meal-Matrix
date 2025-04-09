@@ -2,7 +2,7 @@
 Meal Matrix is a full-featured food delivery web application built using the MERN (MongoDB, Express, React, Node.js) stack. This platform allows users to browse a variety of food items, add them to their cart, and place orders through a seamless online payment system. On the administrative side, restaurant owners can manage their menu, track orders, and update food items in real time.
 
 ## Demo
-You can check out the live demo of the blog website here: [Deployed Website](https://imagi-text-eight.vercel.app)
+You can check out the live demo of the blog website here: [Deployed Website](https://meal-matrix-fontend.vercel.app)
 
 Feel free to explore, create an account, and start experimenting!
 
