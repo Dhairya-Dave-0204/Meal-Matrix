@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link, useNavigate } from "react-router-dom";
-import { StoreContext } from "../../context/storeContext";
+import { StoreContext } from "../../context/StoreContext";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,40 +17,40 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center py-4 gap-3 px-4 md:px-32 z-20">
+    <nav className="z-20 flex items-center justify-between gap-3 px-4 py-4 md:px-32">
       <Link to="/">
         <img src={assets.logo} alt="" className="w-42" />
       </Link>
 
-      <ul className="hidden xl:flex items-center gap-12 font-semibold text-xl text-primary">
-        <Link to="/" className=" hover:scale-110 transition-all duration-700">
+      <ul className="items-center hidden gap-12 text-xl font-semibold xl:flex text-primary">
+        <Link to="/" className="transition-all duration-700  hover:scale-110">
           Home
         </Link>
         <Link
           to="/menu"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           Menu
         </Link>
         <Link
           to="/about"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           About Us
         </Link>
         <Link
           to="/contact"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           Contact Us
         </Link>
       </ul>
 
       {token ? (
-        <div className="hidden xl:flex items-center justify-center text-primary font-semibold text-xl gap-12">
+        <div className="items-center justify-center hidden gap-12 text-xl font-semibold xl:flex text-primary">
           <Link
             to="/cart"
-            className=" hover:scale-110 transition-all duration-700 relative"
+            className="relative transition-all duration-700  hover:scale-110"
           >
             <img src={assets.basket_icon} alt="" />
             <div
@@ -63,11 +63,11 @@ function Navbar() {
           </Link>
           <Link
             to="/myorders"
-            className="hidden xl:block hover:scale-110 transition-all duration-700 relative"
+            className="relative hidden transition-all duration-700 xl:block hover:scale-110"
           >
             <img src={assets.bag_icon} alt="" />
           </Link>
-          <Link to="/" className=" hover:scale-110 transition-all duration-700">
+          <Link to="/" className="transition-all duration-700  hover:scale-110">
             <button
               onClick={logout}
               className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700"
@@ -79,7 +79,7 @@ function Navbar() {
       ) : (
         <Link
           to="/signin"
-          className="hidden xl:flex hover:scale-110 transition-all duration-700"
+          className="hidden transition-all duration-700 xl:flex hover:scale-110"
         >
           <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
             Sign In
@@ -88,7 +88,7 @@ function Navbar() {
       )}
 
       <i
-        className="ri-menu-5-line xl:hidden block text-4xl text-primary cursor-pointer"
+        className="block text-4xl cursor-pointer ri-menu-5-line xl:hidden text-primary"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       ></i>
 
@@ -98,45 +98,45 @@ function Navbar() {
         }`}
         style={{ transition: "transfrom 0.3s ease, opacity 0.3s ease" }}
       >
-        <Link to="/" className=" hover:scale-110 transition-all duration-700">
+        <Link to="/" className="transition-all duration-700  hover:scale-110">
           Home
         </Link>
         <Link
           to="/menu"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           Menu
         </Link>
         <Link
           to="/about"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           About Us
         </Link>
         <Link
           to="/contact"
-          className=" hover:scale-110 transition-all duration-700"
+          className="transition-all duration-700  hover:scale-110"
         >
           Contact Us
         </Link>
         {token ? (
-          <div className="xl:hidden flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-6 xl:hidden">
             <Link
               to="/cart"
-              className=" hover:scale-110 transition-all duration-700 relative"
+              className="relative transition-all duration-700  hover:scale-110"
             >
               <img src={assets.basket_icon} alt="" />
-              <div className=" absolute min-w-3 min-h-3 bg-primary rounded-lg -top-2 -right-2"></div>
+              <div className="absolute rounded-lg  min-w-3 min-h-3 bg-primary -top-2 -right-2"></div>
             </Link>
             <Link
               to="/myorders"
-              className=" hover:scale-110 transition-all duration-700 relative"
+              className="relative transition-all duration-700  hover:scale-110"
             >
               <img src={assets.bag_icon} alt="" />
             </Link>
             <Link
               to="/signout"
-              className=" hover:scale-110 transition-all duration-700"
+              className="transition-all duration-700  hover:scale-110"
             >
               <button
                 onClick={logout}
@@ -149,7 +149,7 @@ function Navbar() {
         ) : (
           <Link
             to="/signin"
-            className=" hover:scale-110 transition-all duration-700"
+            className="transition-all duration-700  hover:scale-110"
           >
             <button className="bg-primary border-2 border-primary text-xl px-8 py-2 text-white font-semibold rounded-xl cursor-pointer hover:bg-[#faf9f6] hover:text-primary transition-all duration-700">
               Sign In
