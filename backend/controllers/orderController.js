@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_KEY)
 // placing user od=rder from frontend
 const placeOrder = async (req, res) => {
 
-    const frontend_url = "meal-matrix-fontend.vercel.app"
+    const frontend_url = "https://meal-matrix-fontend.vercel.app"
 
     try {
         const newOrder = new orderModel({
