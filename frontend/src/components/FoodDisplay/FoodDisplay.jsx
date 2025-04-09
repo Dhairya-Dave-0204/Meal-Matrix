@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StoreContext } from '../../context/storeContext'
+import { StoreContext } from '../../context/StoreContext'
 import { FoodItem } from '../component_index'
 
 function FoodDisplay({category}) {
@@ -7,12 +7,12 @@ function FoodDisplay({category}) {
     const {food_list} = useContext(StoreContext)
 
   return (
-    <div id='food-display' className='food-display mt-7 px-4 md:px-24 lg:px-48 py-4 mx-4 md:mx-8 my-6 md:my-20'>
-        <h2 className=' text-6xl text-center text-primary font-semibold font-expletus mb-8'>
+    <div id='food-display' className='px-4 py-4 mx-4 my-6 food-display mt-7 md:px-24 lg:px-48 md:mx-8 md:my-20'>
+        <h2 className='mb-8 text-6xl font-semibold text-center text-primary font-expletus'>
             Top dishes near you
         </h2>
         
-        <div className='food-display-list grid mt-7 gap-7'>
+        <div className='grid food-display-list mt-7 gap-7'>
             {food_list.map((item,index) => {
                 if (category === "All" || category===item.category) {
                     return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}/>

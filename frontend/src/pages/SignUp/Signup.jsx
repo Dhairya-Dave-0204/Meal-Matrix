@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
-import { StoreContext } from '../../context/storeContext';
+import { StoreContext } from '../../context/StoreContext';
 
 function Signup({data, onChangeHandler}) {
 
@@ -28,10 +28,10 @@ function Signup({data, onChangeHandler}) {
   return (
     <div className="h-[100vh] flex justify-center items-center">
       <div className="bg-white border rounded-xl p-8 shadow-lg backdrop-filter backdrop-blur-sm relative w-[310px] md:w-[560px] lg:w-[768px] h-[70vh] 2xl:h-[63vh]">
-        <h2 className="text-4xl text-center mb-6 font-semibold">Sign Up</h2>
-        <form onSubmit={onRegister} className=" flex flex-col items-center">
-          <div className="my-4 flex flex-col w-full">
-            <label htmlFor="username" className="text-2xl mb-2">
+        <h2 className="mb-6 text-4xl font-semibold text-center">Sign Up</h2>
+        <form onSubmit={onRegister} className="flex flex-col items-center ">
+          <div className="flex flex-col w-full my-4">
+            <label htmlFor="username" className="mb-2 text-2xl">
               Username :
             </label>
             <input
@@ -42,12 +42,12 @@ function Signup({data, onChangeHandler}) {
               required
               onChange={onChangeHandler}
               value={data.name}
-              className="border border-primary border-opacity-30 transition-all duration-500 focus:border-opacity-100 text-primary outline-none accent-primary font-medium text-xl placeholder:text-gray-300 px-4 py-2"
+              className="px-4 py-2 text-xl font-medium transition-all duration-500 border outline-none border-primary border-opacity-30 focus:border-opacity-100 text-primary accent-primary placeholder:text-gray-300"
             />
           </div>
           
-          <div className="my-4 flex flex-col w-full">
-            <label htmlFor="email" className="text-2xl mb-2">
+          <div className="flex flex-col w-full my-4">
+            <label htmlFor="email" className="mb-2 text-2xl">
               E-mail :
             </label>
             <input
@@ -58,12 +58,12 @@ function Signup({data, onChangeHandler}) {
               required
               onChange={onChangeHandler}
               value={data.email}
-              className="border border-primary border-opacity-30 transition-all duration-500 focus:border-opacity-100 text-primary outline-none accent-primary font-medium text-xl placeholder:text-gray-300 px-4 py-2"
+              className="px-4 py-2 text-xl font-medium transition-all duration-500 border outline-none border-primary border-opacity-30 focus:border-opacity-100 text-primary accent-primary placeholder:text-gray-300"
             />
           </div>
           
-          <div className="my-4 flex flex-col w-full">
-            <label htmlFor="password" className="text-2xl mb-2">
+          <div className="flex flex-col w-full my-4">
+            <label htmlFor="password" className="mb-2 text-2xl">
               Password :
             </label>
             <input
@@ -74,16 +74,16 @@ function Signup({data, onChangeHandler}) {
               required
               onChange={onChangeHandler}
               value={data.password}
-              className="border border-primary text-primary border-opacity-30 focus:border-opacity-100 outline-none accent-primary font-medium text-xl placeholder:text-gray-300 px-4 py-2"
+              className="px-4 py-2 text-xl font-medium border outline-none border-primary text-primary border-opacity-30 focus:border-opacity-100 accent-primary placeholder:text-gray-300"
             />
           </div>
 
-          <button type="submit" className=" bg-primary text-white px-6 rounded-2xl py-2 my-4 text-xl font-semibold hover:bg-secondary hover:text-primary transition-all duration-500 hover:scale-110">
+          <button type="submit" className="px-6 py-2 my-4 text-xl font-semibold text-white transition-all duration-500 bg-primary rounded-2xl hover:bg-secondary hover:text-primary hover:scale-110">
             Sign In
           </button>
 
           <p className="text-lg">
-            Already have an account? <Link to="/signin" className=" underline hover:text-primary">Login</Link>
+            Already have an account? <Link to="/signin" className="underline hover:text-primary">Login</Link>
           </p>
         </form>
       </div>

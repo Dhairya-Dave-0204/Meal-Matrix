@@ -1,43 +1,42 @@
 import React from "react";
-import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <>
-      <footer className="bg-secondary py-10">
-        <div className="container mx-auto px-4 md:flex md:justify-between">
+      <footer className="py-10 bg-secondary">
+        <div className="container px-4 mx-auto md:flex md:justify-between">
           {/* Explore Section */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-xl font-semibold mb-4">Explore</h3>
+            <h3 className="mb-4 text-xl font-semibold">Explore</h3>
             
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="hover:text-primary text-base">
+                <Link to="/about" className="text-base hover:text-primary">
                   About Us
                 </Link>
               </li>
               
               <li>
-                <Link to="/contact" className="hover:text-primary text-base">
+                <Link to="/contact" className="text-base hover:text-primary">
                   Contact Us
                 </Link>
               </li>
               
               <li>
-                <Link to="/menu" className="hover:text-primary text-base">
+                <Link to="/menu" className="text-base hover:text-primary">
                   Menu
                 </Link>
               </li>
               
               <li>
-                <Link to="/faq" className="hover:text-primary text-base">
+                <Link to="/faq" className="text-base hover:text-primary">
                   FAQ's
                 </Link>
               </li>
               
               <li>
-                <Link to="/cart" className="hover:text-primary text-base">
+                <Link to="/cart" className="text-base hover:text-primary">
                   Cart
                 </Link>
               </li>
@@ -46,43 +45,43 @@ function Footer() {
 
           {/* Policies Info Section */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-xl font-semibold mb-4">Policies</h3>
+            <h3 className="mb-4 text-xl font-semibold">Policies</h3>
             
             <ul className="space-y-2">
-              <li className="hover:text-primary text-base">
+              <li className="text-base hover:text-primary">
                 <Link to="/privacy-ploicy">Privacy Policy</Link>
               </li>
               
-              <li className="hover:text-primary text-base">
+              <li className="text-base hover:text-primary">
                 <Link to="/restaurant-policy">Restaurant Poicy</Link>
               </li>
               
-              <li className="hover:text-primary text-base">
+              <li className="text-base hover:text-primary">
                 <Link to="/food-policy">Food Poicy</Link>
               </li>
               
-              <li className="hover:text-primary text-base">
+              <li className="text-base hover:text-primary">
                 <Link to="/order-policy">Order Poicy</Link>
               </li>
               
-              <li className="hover:text-primary text-base">
+              <li className="text-base hover:text-primary">
                 <Link
                   to="https://www.instagram.com/"
-                  className="mr-4 bg-primary px-3 py-1 rounded-2xl text-white"
+                  className="px-3 py-1 mr-4 text-white bg-primary rounded-2xl"
                 >
                   <i className="ri-instagram-line"></i>
                 </Link>
                 
                 <Link
                   to="https://x.com/home?lang=en"
-                  className="mr-4 bg-primary px-3 py-1 rounded-2xl text-white"
+                  className="px-3 py-1 mr-4 text-white bg-primary rounded-2xl"
                 >
                   <i className="ri-twitter-x-line"></i>
                 </Link>
                 
                 <Link
                   to="https://www.facebook.com/"
-                  className="mr-4 bg-primary px-3 py-1 rounded-2xl text-white"
+                  className="px-3 py-1 mr-4 text-white bg-primary rounded-2xl"
                 >
                   <i className="ri-facebook-line"></i>
                 </Link>
@@ -92,7 +91,7 @@ function Footer() {
 
           {/* Newsletter Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+            <h3 className="mb-4 text-xl font-semibold">Newsletter</h3>
             
             <p className="mb-4">
               Join our subscribers list to get the latest news and special
@@ -103,7 +102,7 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="text-primary border border-primary outline-none font-medium p-2 rounded placeholder:text-primary"
+                className="p-2 font-medium border rounded outline-none text-primary border-primary placeholder:text-primary"
               />
               
               <div className="flex items-center">
@@ -120,7 +119,7 @@ function Footer() {
               
               <button
                 type="submit"
-                className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded font-medium hover:scale-105 transition-all duration-700"
+                className="px-4 py-2 font-medium text-white transition-all duration-700 rounded bg-primary hover:bg-primary-dark hover:scale-105"
               >
                 Subscribe
               </button>

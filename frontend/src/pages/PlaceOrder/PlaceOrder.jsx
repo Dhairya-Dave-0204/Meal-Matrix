@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { StoreContext } from "../../context/storeContext";
+import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -61,7 +61,7 @@ function PlaceOrder() {
   return (
     <form onSubmit={placeOrder} className="flex items-start justify-between gap-12 mt-[100px] px-4 md:px-24 lg:px-48 py-4 mx-4 md:mx-8 my-6 md:my-20">
       <div className="place-order-left">
-        <p className="font-semibold mb-12 text-3xl font-expletus">Delivery Information</p>
+        <p className="mb-12 text-3xl font-semibold font-expletus">Delivery Information</p>
 
         <div className="flex gap-3">
           <input required type="text" placeholder="First name"  name="firstName" onChange={onChangeHandler} value={data.firstName}/>
@@ -85,8 +85,8 @@ function PlaceOrder() {
       </div>
 
       <div className="place-order-right">
-        <div className="flex flex-1 flex-col gap-5">
-          <h2 className='text-3xl font-expletus font-semibold'>Cart Total</h2>
+        <div className="flex flex-col flex-1 gap-5">
+          <h2 className='text-3xl font-semibold font-expletus'>Cart Total</h2>
 
           <div>
             <div className="flex justify-between">
@@ -111,7 +111,7 @@ function PlaceOrder() {
 
           <button
             type="submit"
-            className="checkout mt-8 text-white font-medium text-xl hover:bg-secondary hover:text-primary transition-all dura5y bg-primary p-3 rounded"
+            className="p-3 mt-8 text-xl font-medium text-white transition-all rounded checkout hover:bg-secondary hover:text-primary dura5y bg-primary"
           >
             Proced to Payment
           </button>
